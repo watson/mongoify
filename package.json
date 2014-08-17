@@ -1,0 +1,42 @@
+{
+  "name": "mongoify",
+  "version": "0.0.0",
+  "description": "Converts an object with native JavaScript types and objects to MongoDB Extended JSON object",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watson/mongoify.git"
+  },
+  "author": "Thomas Watson Steen <w@tson.dk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watson/mongoify/issues"
+  },
+  "homepage": "https://github.com/watson/mongoify",
+  "keywords": [
+    "mongodb",
+    "mongo",
+    "json",
+    "strict",
+    "extended",
+    "transform",
+    "convert",
+    "format"
+  ],
+  "testling": {
+    "files": "test.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
+  }
+}
