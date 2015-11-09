@@ -25,6 +25,7 @@ To this:
 [![browser support](https://ci.testling.com/watson/mongoify.png) ](https://ci.testling.com/watson/mongoify)
 
 [![build status](https://secure.travis-ci.org/watson/mongoify.png)](http://travis-ci.org/watson/mongoify)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 ## What?
 
