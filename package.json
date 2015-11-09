@@ -24,6 +24,7 @@
     "mongodb",
     "mongo",
     "json",
+    "bson",
     "strict",
     "extended",
     "transform",
