@@ -46,13 +46,13 @@ npm install mongoify
 ## Usage
 
 ```js
-var mongoify = require('mongoify');
+var mongoify = require('mongoify')
 
-var obj = { date: new Date('2014-01-01T00:00:00Z') };
+var obj = { date: new Date('2014-01-01T00:00:00Z') }
 
-mongoify(obj);
+mongoify(obj)
 
-console.log(JSON.stringify(obj));
+console.log(JSON.stringify(obj))
 ```
 
 ## License
