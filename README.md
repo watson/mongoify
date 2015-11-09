@@ -2,7 +2,7 @@
 
 Converts:
 
-```javascript
+```js
 {
   foo: { bar: 1 },
   date: new Date('2014-01-01T00:00:00Z'),
@@ -13,7 +13,7 @@ Converts:
 
 To this:
 
-```javascript
+```js
 {
   foo: { bar: 1 },
   date: { $date: '2014-01-01T00:00:00Z' },
@@ -45,7 +45,7 @@ npm install mongoify
 
 ## Usage
 
-```javascript
+```js
 var mongoify = require('mongoify');
 
 var obj = { date: new Date('2014-01-01T00:00:00Z') };
