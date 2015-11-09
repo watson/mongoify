@@ -1,6 +1,7 @@
 'use strict'
 
 var assert = require('assert')
+var bson = require('bson')
 var mongo2json = require('./')
 
 var date = new Date()
@@ -8,6 +9,13 @@ var date = new Date()
 var cases = [
   [ {}, {} ],
   [ [{}], [{}] ],
+  [ { foo: bson.Binary('foo') }, { foo: { $binary: 'Zm9v', $type: 0 } } ],
+  [ { foo: bson.Timestamp() }, { foo: { $timestamp: { $t: 0, $i: 0 } } } ],
+  [ { foo: bson.ObjectId('000000000000000000000000') }, { foo: { $oid: '000000000000000000000000' } } ],
+  [ { foo: bson.DBRef('foo', 'bar') }, { foo: { $ref: 'foo', $id: 'bar' } } ],
+  [ { foo: bson.MinKey() }, { foo: { $minKey: 1 } } ],
+  [ { foo: bson.MaxKey() }, { foo: { $maxKey: 1 } } ],
+  [ { foo: bson.Long(0) }, { foo: { $numberLong: 0 } } ],
   [ { foo: 1, bar: true, baz: [1, 2, 3] }, { foo: 1, bar: true, baz: [1, 2, 3] } ],
   [ { foo: date }, { foo: { $date: date.toISOString() } } ],
   [ { foo: undefined }, { foo: { $undefined: true } } ],
