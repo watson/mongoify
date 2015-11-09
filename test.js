@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-var assert = require('assert');
-var mongo2json = require('./');
+var assert = require('assert')
+var mongo2json = require('./')
 
-var date = new Date();
+var date = new Date()
 
 var cases = [
   [ {}, {} ],
@@ -17,11 +17,11 @@ var cases = [
     { foo: { bar: { $undefined: true } }, bar: { date: { $date: date.toISOString() } }, baz: { pattern: { $regex: 'foo', $options: 'gi' } } }
   ],
   [ [{ foo: 1 }, { bar: undefined }], [{ foo: 1 }, { bar: { $undefined: true } }] ]
-];
+]
 
-assert(typeof mongo2json === 'function', 'The module should expose a function');
+assert(typeof mongo2json === 'function', 'The module should expose a function')
 
 cases.forEach(function (testCase) {
-  mongo2json(testCase[0]);
-  assert.deepEqual(testCase[0], testCase[1]);
-});
+  mongo2json(testCase[0])
+  assert.deepEqual(testCase[0], testCase[1])
+})
